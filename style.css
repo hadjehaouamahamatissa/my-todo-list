@@ -15,7 +15,7 @@ body {
     padding: 32px 24px;
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 700px;
+    max-width: 500px;
     border-radius: 20px;
     margin: 40px 0 20px 0;
 }
@@ -38,32 +38,7 @@ body {
     
 }
 
-.inputField {
-    flex: 1;
-    border-right: none;
-    outline: none;
-    margin-left: 160px;
-}
 
-#addBtn {
-    border-color: rgb(253, 108, 71);
-    color: rgb(3, 2, 2);
-    border: none;
-    
-}
-#addBtn:hover {
-    background-color: #e87c77;
-    color: rgb(252, 251, 251);
-    border: none;
-    margin-left: 80px;
-    
-    
-    
-}
-
-#addBtn:hover{
-    background-color: rgb(248, 127, 127);
-}
 
 #container > div:nth-child(3) {
     display: flex;
@@ -125,7 +100,53 @@ hr {
     padding: 12px 12px;
     border-radius: 50px;
     transition: background 0.2s;
-    
 
 }
 
+#TasksList li label{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+#TasksList li input[type ="checkbox"] {
+    accent-color: white;
+    width: 18px;
+    height: 18px;
+}
+
+
+#TasksList li .fa-pen-to-square,
+#TasksList li .fa-trash {
+    margin-left: 12px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    transition: color 0.2s;
+    font-size: 1.1rem;
+}
+
+#TasksList li fa-trash:hover {
+    color: black;
+}
+
+#TasksList li .fa-pen-to-square:hover {
+    color: black;
+}
+
+
+footer {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    background: black;
+    border-radius: 5px;
+    width: 100%;
+}
+
+
+.checked {
+    text-decoration: line-through;
+    color: rgba(137, 129, 129, 0.866);
+}
