@@ -11,22 +11,38 @@ const addTask = () => {
                 <input type="checkbox">
                 <span>${task}</span>
             </label>
-            <span class="editBtn"></span><i class="fa-solid fa-pen-to-square"></i>
-            <span class="deleteBtn"></span><i class="fa-solid fa-trash"></i>
+            <span class="editBtn"><i class="fa-solid fa-pen-to-square"></i></span>
+            <span class="deleteBtn"><i class="fa-solid fa-trash"></i></span>
         `;
         tasks.appendChild(li);
         inputField.value = ""; 
     // console.log(li);
 
     const checkBox = li.querySelector("input");
+    let span1 = li.querySelector("span");
+    const editBtn = li.querySelector(".editBtn");
+    console.log(editBtn);
+
     // console.log(checkBox);
     checkBox.addEventListener("click", () => {
-        let span1 = li.querySelector("span");
         span1.classList.toggle("checked");
-    });
+    })  
 
+    editBtn.addEventListener("click", function() {
+        console.log("hello");
         
-    }
+        const taskUpdate = prompt("editer une tache:", span1.textContent);
+        if (taskUpdate !== null){
+            span1.textContent = taskUpdate;
+            checkBox.checked = false;
+            span1.classList.remove("checked");
+            
+        }
+
+    })
+    };
+
+
 
 
 
